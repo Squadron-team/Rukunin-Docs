@@ -5,9 +5,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'Rukunin',
+  tagline: 'Dokumentasi Aplikasi Manajemen RT/RW',
+  favicon: 'img/rukunin_r_logo.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Squadron-team', // Usually your GitHub org/user name.
+  projectName: 'Rukunin-Docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -31,8 +31,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'id',
+    locales: ['id', 'en'],
   },
 
   presets: [
@@ -44,23 +44,9 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Squadron-team/Rukunin-Docs/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -72,24 +58,61 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Rukunin',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Rukunin Logo',
+        src: 'img/rukunin_logo.png',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Dokumentasi',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          to: '/docs/getting-started',
+          label: 'Mulai Cepat',
+          position: 'left',
+        },
+        {
+          type: 'dropdown',
+          label: 'Panduan Pengguna',
+          position: 'left',
+          items: [
+            {
+              label: '👤 Admin',
+              to: '/docs/roles/admin/overview',
+            },
+            {
+              label: '👔 Ketua RW',
+              to: '/docs/roles/ketua-rw/overview',
+            },
+            {
+              label: '👔 Ketua RT',
+              to: '/docs/roles/ketua-rt/overview',
+            },
+            {
+              label: '📝 Sekretaris',
+              to: '/docs/roles/secretary/overview',
+            },
+            {
+              label: '💰 Bendahara',
+              to: '/docs/roles/treasurer/overview',
+            },
+            {
+              label: '🏠 Warga',
+              to: '/docs/roles/resident/overview',
+            },
+          ],
+        },
+        {
+          href: 'https://github.com/Squadron-team/Rukunin-App',
           label: 'GitHub',
           position: 'right',
         },
@@ -99,50 +122,55 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Dokumentasi',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Mulai Cepat',
+              to: '/docs/getting-started',
+            },
+            {
+              label: 'Fitur Utama',
+              to: '/docs/features',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Panduan Pengguna',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Admin',
+              to: '/docs/roles/admin/overview',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Ketua RW',
+              to: '/docs/roles/ketua-rw/overview',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Ketua RT',
+              to: '/docs/roles/ketua-rt/overview',
+            },
+            {
+              label: 'Warga',
+              to: '/docs/roles/resident/overview',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Lainnya',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/Squadron-team/Rukunin-App',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Rukunin. Dibangun dengan Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['dart', 'java', 'kotlin'],
     },
   } satisfies Preset.ThemeConfig,
 };

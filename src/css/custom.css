@@ -1,30 +1,264 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Custom styles for Rukunin Documentation
+ * Matching the mobile app theme
  */
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Primary Colors - matching AppColors from your Flutter app */
+  --ifm-color-primary: #FFC107;
+  --ifm-color-primary-dark: #FFAA00;
+  --ifm-color-primary-darker: #FF9800;
+  --ifm-color-primary-darkest: #FF8F00;
+  --ifm-color-primary-light: #FFCA28;
+  --ifm-color-primary-lighter: #FFD54F;
+  --ifm-color-primary-lightest: #FFE082;
+
+  /* Semantic Colors */
+  --ifm-color-success: #4CAF50;
+  --ifm-color-info: #2196F3;
+  --ifm-color-warning: #FF9800;
+  --ifm-color-danger: #F44336;
+
+  /* Text Colors */
+  --ifm-color-text-primary: #212121;
+  --ifm-color-text-secondary: #757575;
+
+  /* Background Colors */
+  --ifm-background-color: #FAFAFA;
+  --ifm-card-background-color: #FFFFFF;
+
+  /* Border */
+  --ifm-border-color: #E0E0E0;
+
+  /* Font */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --ifm-font-size-base: 14px;
+  --ifm-line-height-base: 1.5;
+
+  /* Border Radius */
+  --ifm-global-radius: 12px;
+  --ifm-button-border-radius: 12px;
+  --ifm-card-border-radius: 16px;
+
+  /* Code blocks */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 193, 7, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #FFD54F;
+  --ifm-background-color: #1E1E1E;
+  --ifm-card-background-color: #2D2D2D;
+  --ifm-color-text-primary: #E0E0E0;
+  --ifm-color-text-secondary: #BDBDBD;
+  --ifm-border-color: #424242;
+}
+
+/* Custom Card Styles */
+.card {
+  border: 1px solid var(--ifm-border-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Role Badge Styles */
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.role-badge.admin {
+  background-color: rgba(156, 39, 176, 0.1);
+  color: #9C27B0;
+}
+
+.role-badge.ketua-rw {
+  background-color: rgba(33, 150, 243, 0.1);
+  color: #2196F3;
+}
+
+.role-badge.ketua-rt {
+  background-color: rgba(3, 169, 244, 0.1);
+  color: #03A9F4;
+}
+
+.role-badge.secretary {
+  background-color: rgba(0, 188, 212, 0.1);
+  color: #00BCD4;
+}
+
+.role-badge.treasurer {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+}
+
+.role-badge.resident {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #FFC107;
+}
+
+/* Feature Grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.feature-card {
+  background: var(--ifm-card-background-color);
+  padding: 24px;
+  border-radius: var(--ifm-card-border-radius);
+  border: 1px solid var(--ifm-border-color);
+  transition: all 0.2s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.feature-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.feature-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ifm-color-text-primary);
+  margin-bottom: 8px;
+}
+
+.feature-card-description {
+  font-size: 13px;
+  color: var(--ifm-color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Step-by-step guide */
+.step-container {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+  padding: 20px;
+  background: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.step-content h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+/* Navigation improvements */
+.navbar {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.navbar__title {
+  font-weight: 700;
+}
+
+/* Sidebar improvements */
+.menu__link {
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.menu__link--active {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: var(--ifm-color-primary-dark);
+  font-weight: 600;
+}
+
+/* Button styles matching Flutter app */
+.button {
+  border-radius: var(--ifm-button-border-radius);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px 24px;
+  transition: all 0.2s ease;
+}
+
+.button--primary {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.button--outline {
+  border: 1.5px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+/* Admonition styles */
+.admonition {
+  border-radius: var(--ifm-card-border-radius);
+  border-left-width: 4px;
+}
+
+/* Table improvements */
+table {
+  border-radius: var(--ifm-card-border-radius);
+  overflow: hidden;
+}
+
+/* Hero section for homepage */
+.hero-banner {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #FFC107 0%, #FFCA28 100%);
+  color: white;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto 32px;
 }
