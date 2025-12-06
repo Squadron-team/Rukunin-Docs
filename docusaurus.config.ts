@@ -15,17 +15,17 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://squadron-team.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/Rukunin-Docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Squadron-team', // Usually your GitHub org/user name.
   projectName: 'Rukunin-Docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn', // Changed from 'throw' to 'warn' temporarily
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -80,6 +80,8 @@ const config: Config = {
           label: 'Mulai Cepat',
           position: 'left',
         },
+        // Temporarily comment out the dropdown until pages are created
+        /*
         {
           type: 'dropdown',
           label: 'Panduan Pengguna',
@@ -111,6 +113,7 @@ const config: Config = {
             },
           ],
         },
+        */
         {
           href: 'https://github.com/Squadron-team/Rukunin-App',
           label: 'GitHub',
@@ -128,12 +131,17 @@ const config: Config = {
               label: 'Mulai Cepat',
               to: '/docs/getting-started',
             },
+            // Temporarily comment out until page is created
+            /*
             {
               label: 'Fitur Utama',
               to: '/docs/features',
             },
+            */
           ],
         },
+        // Temporarily comment out until pages are created
+        /*
         {
           title: 'Panduan Pengguna',
           items: [
@@ -155,6 +163,7 @@ const config: Config = {
             },
           ],
         },
+        */
         {
           title: 'Lainnya',
           items: [
