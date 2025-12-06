@@ -1,41 +1,12 @@
-# Website
+# 📖 Rukunin Documentation 
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Welcome to the official documentation for the **Rukunin** app.  
+This site provides complete user guidance for all roles within the app, helping users understand every feature in detail.
 
-## Installation
+You can also access this documentation online at:  
+👉 https://squadron-team.github.io/Rukunin-Docs/
 
-```bash
-yarn
-```
+The documentation is publicly accessible at the following address:  
+👉 https://squadron-team.github.io/Rukunin-Docs/
 
-## Local Development
-
-```bash
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+This documentation is available in two languages—**Bahasa Indonesia** and **English**—to make it accessible and easy to understand for all users.
