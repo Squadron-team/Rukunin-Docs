@@ -10,329 +10,99 @@ sidebar_position: 2
 
 Panduan lengkap untuk mengelola data iuran warga menggunakan aplikasi Rukunin.
 
-## Melihat Data Iuran
+## Melihat Data Iuran 
 
 <div className="step-container">
   <div className="step-number">1</div>
   <div className="step-content">
     <h3>Akses Menu Iuran</h3>
-    <p>Dari dashboard, pilih tab <strong>Iuran</strong>, lalu klik <strong>Data Iuran</strong></p>
+    <p>Dari dashboard, pilih tab <strong>Iuran</strong>, lalu klik <strong>Data Iuran</strong>. Halaman ini adalah daftar pembayaran yang dikirim oleh warga dan difokuskan untuk proses verifikasi oleh Bendahara.</p>
   </div>
 </div>
 
 <div className="step-container">
   <div className="step-number">2</div>
   <div className="step-content">
-    <h3>Lihat Ringkasan</h3>
-    <p>Anda akan melihat ringkasan iuran bulan ini:</p>
+    <h3>Daftar Verifikasi</h3>
+    <p>Di halaman verifikasi Anda akan melihat daftar entri iuran yang menunggu pemeriksaan. Setiap baris menampilkan:</p>
     <ul>
-      <li>Total warga wajib iuran</li>
-      <li>Jumlah yang sudah bayar</li>
-      <li>Jumlah yang belum bayar</li>
-      <li>Total terkumpul</li>
-      <li>Persentase pembayaran</li>
+      <li>Nama warga</li>
+      <li>RT</li>
+      <li>Jumlah yang dilaporkan</li>
+      <li>Tombol <strong>Verifikasi</strong> (tap untuk membuka halaman detail)</li>
     </ul>
+    <p>Terdapat filter untuk memilih RT sehingga Anda dapat memfokuskan verifikasi ke RT tertentu.</p>
   </div>
 </div>
-
-### Filter & Tampilan
-
-Gunakan filter untuk mempermudah monitoring:
-
-| Filter | Deskripsi |
-|--------|-----------|
-| **Bulan** | Pilih bulan yang ingin dilihat |
-| **Status** | Lunas, Belum Bayar, Terlambat |
-| **RT** | Filter berdasarkan RT tertentu (khusus RW) |
-| **Jumlah** | Berdasarkan nominal iuran |
 
 ## Verifikasi Pembayaran
 
 <div className="step-container">
   <div className="step-number">1</div>
   <div className="step-content">
-    <h3>Lihat Pembayaran Pending</h3>
-    <p>Filter status <strong>Menunggu Verifikasi</strong> untuk melihat pembayaran yang perlu diverifikasi</p>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">2</div>
-  <div className="step-content">
-    <h3>Cek Detail Pembayaran</h3>
-    <p>Klik pembayaran untuk melihat detail:</p>
+    <h3>Buka Halaman Detail</h3>
+    <p>
+      Ketika Anda tap <strong>Verifikasi</strong> pada baris, dibuka halaman detail yang menampilkan:
+    </p>
     <ul>
       <li>Nama warga</li>
-      <li>Jumlah yang dibayar</li>
+      <li>Asal RT</li>
+      <li>Jenis iuran</li>
+      <li>Jumlah</li>
       <li>Tanggal transfer</li>
       <li>Metode pembayaran</li>
-      <li>Bukti transfer (foto)</li>
+      <li>Lampiran bukti pembayaran (gambar yang dapat di-zoom)</li>
     </ul>
   </div>
 </div>
 
 <div className="step-container">
+  <div className="step-number">2</div>
+  <div className="step-content">
+    <h3>Hasil Deteksi AI</h3>
+    <p>Halaman juga menampilkan hasil deteksi otomatis oleh sistem (AI) terkait kemungkinan manipulasi pada bukti. Hasil dapat berupa label seperti <strong>Perlu Pemeriksaan</strong> atau <strong>Terverifikasi Asli</strong>. Namun:</p>
+    <p>AI hanya membantu mendeteksi anomali,  Bendahara wajib melakukan verifikasi manual untuk memastikan kebenaran transaksi.</p>
+  </div>
+</div>
+
+:::warning Perhatian
+Hasil deteksi AI bersifat rekomendasi. Selalu lakukan pemeriksaan manual pada bukti pembayaran sebelum mengonfirmasi.
+:::
+
+<div className="step-container">
   <div className="step-number">3</div>
   <div className="step-content">
-    <h3>Verifikasi Bukti</h3>
-    <p>Periksa bukti transfer:</p>
-    <ul>
-      <li>Cek nominal sesuai</li>
-      <li>Cek rekening tujuan benar</li>
-      <li>Cek tanggal transfer</li>
-      <li>Cek nama pengirim</li>
-    </ul>
+    <h3>Cek Ulang</h3>
+    <p>Jika perlu, gunakan tombol <strong>Cek Ulang</strong> untuk menjalankan deteksi AI ulang terhadap lampiran. Ini berguna jika gambar telah diperbaiki atau diunggah ulang.</p>
   </div>
 </div>
 
 <div className="step-container">
   <div className="step-number">4</div>
-  <div className="step-content">
-    <h3>Approve atau Tolak</h3>
-    <p>Pilih salah satu:</p>
+  <div class="step-content">
+    <h3>Tolak atau Konfirmasi</h3>
+    <p>Setelah pemeriksaan manual selesai, pilih:</p>
     <ul>
-      <li><strong>Verifikasi</strong> - Jika bukti valid, sistem otomatis generate kwitansi</li>
-      <li><strong>Tolak</strong> - Jika ada masalah, berikan alasan penolakan</li>
+      <li>
+        <strong>Konfirmasi</strong> menandakan pembayaran valid; sistem akan generate kwitansi dan mengubah status menjadi Lunas.
+      </li>
+      <li>
+        <strong>Tolak</strong> jika bukti tidak valid; saat menolak, tampilkan form (opsional) untuk memasukkan alasan penolakan yang akan dikirim ke warga.
+      </li>
     </ul>
+    <p>Setelah Anda memilih Tolak atau Konfirmasi, entri tersebut akan dihapus dari daftar verifikasi (tidak lagi muncul pada filter Menunggu Verifikasi).</p>
   </div>
 </div>
 
-:::tip Verifikasi Cepat
-Jika bukti transfer sudah jelas dan benar, Anda bisa verifikasi langsung dari notifikasi tanpa perlu buka detail.
+:::tip Praktik Baik
+- Periksa nominal dan rekening tujuan.
+- Zoom lampiran bukti untuk melihat watermark atau tanda manipulasi.
+- Catat alasan penolakan bila menolak untuk mempermudah tindak lanjut.
 :::
 
-## Mencatat Pembayaran Manual
+> Halaman ini hanya membahas proses verifikasi pembayaran. Untuk pembuatan kwitansi dan fitur transaksi lainnya, lihat halaman terkait:
 
-Untuk pembayaran tunai atau langsung:
-
-<div className="step-container">
-  <div className="step-number">1</div>
-  <div className="step-content">
-    <h3>Pilih Warga</h3>
-    <p>Dari daftar iuran, klik warga yang ingin dicatat pembayarannya</p>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">2</div>
-  <div className="step-content">
-    <h3>Klik Catat Pembayaran</h3>
-    <p>Klik tombol <strong>Catat Pembayaran Manual</strong></p>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">3</div>
-  <div className="step-content">
-    <h3>Isi Detail</h3>
-    <p>Lengkapi informasi:</p>
-    <ul>
-      <li>Jumlah yang dibayar</li>
-      <li>Tanggal pembayaran</li>
-      <li>Metode: Tunai/Transfer</li>
-      <li>Keterangan (opsional)</li>
-    </ul>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">4</div>
-  <div className="step-content">
-    <h3>Simpan & Generate Kwitansi</h3>
-    <p>Klik <strong>Simpan</strong>, sistem akan:</p>
-    <ul>
-      <li>Mencatat pembayaran</li>
-      <li>Generate kwitansi otomatis</li>
-      <li>Update status menjadi "Lunas"</li>
-      <li>Kirim notifikasi ke warga</li>
-    </ul>
-  </div>
-</div>
-
-## Membuat Kwitansi
-
-Kwitansi dibuat otomatis setelah verifikasi, namun Anda bisa cetak ulang:
-
-<div className="step-container">
-  <div className="step-number">1</div>
-  <div className="step-content">
-    <h3>Akses Riwayat Iuran</h3>
-    <p>Tab <strong>Iuran → Riwayat Iuran</strong></p>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">2</div>
-  <div className="step-content">
-    <h3>Cari Pembayaran</h3>
-    <p>Cari pembayaran warga yang kwitansinya akan dicetak</p>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">3</div>
-  <div className="step-content">
-    <h3>Cetak Kwitansi</h3>
-    <p>Klik <strong>Cetak Kwitansi</strong>, pilih format:</p>
-    <ul>
-      <li><strong>PDF</strong> - Untuk dikirim digital</li>
-      <li><strong>Print</strong> - Untuk cetak fisik</li>
-      <li><strong>Share</strong> - Kirim via WhatsApp/Email</li>
-    </ul>
-  </div>
-</div>
-
-### Format Kwitansi
-
-Kwitansi mencakup informasi:
-- Nomor kwitansi (auto-generated)
-- Tanggal pembayaran
-- Nama warga dan alamat
-- Periode iuran (bulan/tahun)
-- Jumlah yang dibayar
-- Terbilang
-- Tanda tangan Bendahara (digital)
-- QR Code untuk verifikasi
-
-## Mengirim Reminder Iuran
-
-<div className="step-container">
-  <div className="step-number">1</div>
-  <div className="step-content">
-    <h3>Filter Belum Bayar</h3>
-    <p>Filter status <strong>Belum Bayar</strong></p>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">2</div>
-  <div className="step-content">
-    <h3>Pilih Warga</h3>
-    <p>Centang warga yang akan dikirimi reminder (bisa multiple)</p>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">3</div>
-  <div className="step-content">
-    <h3>Kirim Reminder</h3>
-    <p>Klik <strong>Kirim Reminder</strong>, pilih metode:</p>
-    <ul>
-      <li><strong>Notifikasi App</strong> - Via aplikasi</li>
-      <li><strong>WhatsApp</strong> - Via WA broadcast</li>
-      <li><strong>SMS</strong> - Via SMS</li>
-    </ul>
-  </div>
-</div>
-
-:::tip Auto-Reminder
-Anda bisa set auto-reminder H-3, H-1, dan H+2 setelah jatuh tempo di menu Pengaturan.
-:::
-
-## Mengelola Tunggakan
-
-<div className="step-container">
-  <div className="step-number">1</div>
-  <div className="step-content">
-    <h3>Lihat Tunggakan</h3>
-    <p>Filter status <strong>Terlambat</strong> atau <strong>Menunggak</strong></p>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">2</div>
-  <div className="step-content">
-    <h3>Cek Histori</h3>
-    <p>Klik warga untuk melihat:</p>
-    <ul>
-      <li>Bulan-bulan yang menunggak</li>
-      <li>Total tunggakan</li>
-      <li>Denda (jika ada)</li>
-      <li>Histori pembayaran sebelumnya</li>
-    </ul>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">3</div>
-  <div className="step-content">
-    <h3>Koordinasi</h3>
-    <p>Untuk tunggakan > 3 bulan:</p>
-    <ul>
-      <li>Hubungi warga via telpon/WA</li>
-      <li>Tanyakan kendala pembayaran</li>
-      <li>Tawarkan solusi (cicilan, keringanan, dll)</li>
-      <li>Laporkan ke Ketua RT/RW jika perlu</li>
-    </ul>
-  </div>
-</div>
-
-## Laporan Iuran Bulanan
-
-<div className="step-container">
-  <div className="step-number">1</div>
-  <div className="step-content">
-    <h3>Generate Laporan</h3>
-    <p>Tab <strong>Iuran → Riwayat Iuran</strong>, klik <strong>Laporan Bulanan</strong></p>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">2</div>
-  <div className="step-content">
-    <h3>Pilih Periode</h3>
-    <p>Pilih bulan dan tahun yang akan dilaporkan</p>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">3</div>
-  <div className="step-content">
-    <h3>Download</h3>
-    <p>Laporan mencakup:</p>
-    <ul>
-      <li>Ringkasan pembayaran</li>
-      <li>Daftar warga lunas</li>
-      <li>Daftar warga belum bayar</li>
-      <li>Total pemasukan iuran</li>
-      <li>Grafik persentase pembayaran</li>
-    </ul>
-  </div>
-</div>
-
-## Tips Pengelolaan Iuran
-
-:::tip Best Practice
-- **Verifikasi cepat** - Proses pembayaran maksimal 1x24 jam
-- **Update status** - Selalu update status pembayaran real-time
-- **Reminder rutin** - Kirim reminder H-3 sebelum jatuh tempo
-- **Follow up tunggakan** - Hubungi warga yang menunggak > 2 bulan
-- **Laporan bulanan** - Buat laporan setiap akhir bulan
-- **Transparansi** - Share laporan ke grup warga
-:::
-
-## Troubleshooting
-
-### Pembayaran tidak masuk
-
-**Solusi**:
-1. Cek apakah warga upload bukti transfer
-2. Pastikan nominal dan rekening benar
-3. Tanya tanggal dan jam transfer
-4. Cek mutasi rekening RT/RW
-5. Jika sudah masuk rekening tapi belum tercatat, input manual
-
-### Kwitansi hilang
-
-**Solusi**:
-Cetak ulang dari **Riwayat Iuran** dengan nomor kwitansi yang sama.
-
-### Data pembayaran salah
-
-**Solusi**:
-1. Jika belum diverifikasi: Edit data lalu verifikasi
-2. Jika sudah diverifikasi: Tidak bisa edit, buat catatan koreksi
-3. Hubungi admin untuk adjust data jika perlu
+- [Membuat Kwitansi](/docs/roles/treasurer/create-receipt)
 
 ---
 
