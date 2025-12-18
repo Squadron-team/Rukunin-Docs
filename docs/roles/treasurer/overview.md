@@ -81,16 +81,6 @@ Setelah login, Anda akan melihat dashboard Bendahara dengan informasi keuangan:
       Generate kwitansi pembayaran digital
     </div>
   </div>
-
-  <div className="feature-card">
-    <div className="feature-card-icon" style={{backgroundColor: 'rgba(96, 125, 139, 0.1)', color: '#607D8B'}}>
-      📜
-    </div>
-    <div className="feature-card-title">Riwayat Iuran</div>
-    <div className="feature-card-description">
-      Lihat histori pembayaran iuran
-    </div>
-  </div>
 </div>
 
 ### 2. 💼 Manajemen Transaksi
@@ -125,41 +115,11 @@ Setelah login, Anda akan melihat dashboard Bendahara dengan informasi keuangan:
       Catat pengeluaran kas untuk kegiatan
     </div>
   </div>
-
-  <div className="feature-card">
-    <div className="feature-card-icon" style={{backgroundColor: 'rgba(255, 152, 0, 0.1)', color: '#FF9800'}}>
-      🔄
-    </div>
-    <div className="feature-card-title">Mutasi Kas</div>
-    <div className="feature-card-description">
-      Lihat mutasi keluar-masuk kas
-    </div>
-  </div>
 </div>
 
 ### 3. 📊 Laporan Keuangan
 
 <div className="feature-grid">
-  <div className="feature-card">
-    <div className="feature-card-icon" style={{backgroundColor: 'rgba(33, 150, 243, 0.1)', color: '#2196F3'}}>
-      📅
-    </div>
-    <div className="feature-card-title">Ringkasan Bulanan</div>
-    <div className="feature-card-description">
-      Lihat ringkasan keuangan per bulan
-    </div>
-  </div>
-
-  <div className="feature-card">
-    <div className="feature-card-icon" style={{backgroundColor: 'rgba(76, 175, 80, 0.1)', color: '#4CAF50'}}>
-      📈
-    </div>
-    <div className="feature-card-title">Laporan Keuangan</div>
-    <div className="feature-card-description">
-      Generate laporan keuangan lengkap
-    </div>
-  </div>
-
   <div className="feature-card">
     <div className="feature-card-icon" style={{backgroundColor: 'rgba(156, 39, 176, 0.1)', color: '#9C27B0'}}>
       📊

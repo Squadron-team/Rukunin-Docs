@@ -113,41 +113,8 @@ Setelah login, Anda akan melihat dashboard Ketua RT dengan informasi penting:
   </div>
 </div>
 
-### 2. 💰 Keuangan RT
 
-<div className="feature-grid">
-  <div className="feature-card">
-    <div className="feature-card-icon" style={{backgroundColor: 'rgba(76, 175, 80, 0.1)', color: '#4CAF50'}}>
-      💳
-    </div>
-    <div className="feature-card-title">Iuran Bulanan</div>
-    <div className="feature-card-description">
-      Kelola pembayaran iuran warga
-    </div>
-  </div>
-
-  <div className="feature-card">
-    <div className="feature-card-icon" style={{backgroundColor: 'rgba(255, 193, 7, 0.1)', color: '#FFC107'}}>
-      🏦
-    </div>
-    <div className="feature-card-title">Kas RT</div>
-    <div className="feature-card-description">
-      Monitor kas masuk dan keluar RT
-    </div>
-  </div>
-
-  <div className="feature-card">
-    <div className="feature-card-icon" style={{backgroundColor: 'rgba(33, 150, 243, 0.1)', color: '#2196F3'}}>
-      📜
-    </div>
-    <div className="feature-card-title">Riwayat Transaksi</div>
-    <div className="feature-card-description">
-      Lihat histori semua transaksi keuangan
-    </div>
-  </div>
-</div>
-
-### 3. 📅 Kegiatan & Rapat
+### 2. 📅 Kegiatan & Rapat
 
 <div className="feature-grid">
   <div className="feature-card">
@@ -181,7 +148,7 @@ Setelah login, Anda akan melihat dashboard Ketua RT dengan informasi penting:
   </div>
 </div>
 
-### 4. 📋 Layanan Warga
+### 3. 📋 Layanan Warga
 
 <div className="feature-grid">
   <div className="feature-card">
@@ -201,16 +168,6 @@ Setelah login, Anda akan melihat dashboard Ketua RT dengan informasi penting:
     <div className="feature-card-title">Laporan Warga</div>
     <div className="feature-card-description">
       Tindak lanjuti laporan dari warga
-    </div>
-  </div>
-
-  <div className="feature-card">
-    <div className="feature-card-icon" style={{backgroundColor: 'rgba(76, 175, 80, 0.1)', color: '#4CAF50'}}>
-      🤲
-    </div>
-    <div className="feature-card-title">Bantuan Sosial</div>
-    <div className="feature-card-description">
-      Kelola distribusi bantuan sosial
     </div>
   </div>
 
@@ -239,11 +196,12 @@ Dashboard menampilkan aktivitas real-time untuk monitoring cepat:
 Pelajari lebih detail tentang setiap fitur:
 
 - [Mengelola Data Warga](/docs/roles/ketua-rt/manage-residents)
-- [Menambah Warga Baru](/docs/roles/ketua-rt/add-resident)
-- [Mengelola Iuran](/docs/roles/ketua-rt/manage-dues)
-- [Membuat Kegiatan RT](/docs/roles/ketua-rt/create-activity)
-- [Memproses Surat](/docs/roles/ketua-rt/process-documents)
-- [Menangani Laporan](/docs/roles/ketua-rt/handle-reports)
+- [Melihat Daftar Keluarga](/docs/roles/ketua-rt/manage-family)
+- [Manajemen Wilayah RT](/docs/roles/ketua-rt/manage-wilayah-rt)
+- [Manajemen Kegiatan](/docs/roles/ketua-rt/manage-kegiatan)
+- [Kelola Pengajuan Surat Warga](/docs/roles/ketua-rt/manage-pengajuan-surat)
+- [Manajemen Laporan Warga](/docs/roles/ketua-rt/manage-laporan-warga)
+- [Laporan RT](/docs/roles/ketua-rt/laporan-rt)
 
 ## Tanggung Jawab Ketua RT
 
@@ -270,11 +228,6 @@ Sebagai Ketua RT, Anda perlu:
 - Catat mutasi warga (pindah masuk/keluar) dengan tepat
 - Verifikasi KK dan KTP saat pendaftaran
 
-### Keuangan
-- Buat laporan keuangan bulanan
-- Reminder iuran H-3 sebelum jatuh tempo
-- Rekonsiliasi kas setiap akhir bulan
-
 ### Komunikasi
 - Gunakan fitur pengumuman untuk info penting
 - Balas laporan warga maksimal 1x24 jam
@@ -289,10 +242,6 @@ A: Buka tab **Warga → Tambah Warga**, isi formulir lengkap dengan data KTP dan
 **Q: Bagaimana jika warga pindah keluar RT?**
 
 A: Buka **Warga → Catat Mutasi**, pilih warga yang pindah, catat tanggal dan tujuan pindah, lalu ubah status menjadi "Pindah Keluar".
-
-**Q: Bagaimana cara membuat laporan keuangan bulanan?**
-
-A: Buka **Keuangan → Kas RT**, pilih periode bulan yang diinginkan, lalu klik **Generate Laporan**.
 
 **Q: Apakah saya bisa mengedit data warga yang sudah terdaftar?**
 
