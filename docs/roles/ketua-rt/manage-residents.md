@@ -27,10 +27,19 @@ Panduan lengkap untuk mengelola data warga di RT Anda.
     <p>Anda akan melihat daftar warga dengan informasi:</p>
     <ul>
       <li>Nama lengkap</li>
-      <li>NIK</li>
       <li>Alamat</li>
-      <li>Status (Aktif/Pindah/Meninggal)</li>
-      <li>Status iuran</li>
+      <li>NIK</li>
+      <li>No. KK</li>
+      <li>Tanggal Terdaftar</li>
+      <li>Peran</li>
+      <li>Jenis Kelamin</li>
+      <li>Status Kehidupan</li>
+      <li>Tempat Lahir</li>
+      <li>Tanggal Lahir</li>
+      <li>Pekerjaan</li>
+      <li>Status Perkawinan</li>
+      <li>Pendidikan Terakhir</li>
+      <li>Dokumen Pendukung (KTP & KK)</li>
     </ul>
   </div>
 </div>
@@ -39,47 +48,9 @@ Panduan lengkap untuk mengelola data warga di RT Anda.
 
 Gunakan filter untuk mempermudah pencarian:
 
-- **Berdasarkan status** - Aktif, Pindah, Meninggal
-- **Berdasarkan KK** - Kelompok per Kartu Keluarga
-- **Berdasarkan alamat** - Gang/Blok tertentu
-- **Status iuran** - Lunas, Menunggak
-- **Jenis kelamin** - Laki-laki, Perempuan
-- **Rentang usia** - Anak, Dewasa, Lansia
+- **Berdasarkan status** : Aktif, Non-aktif
 
-## Detail Warga
-
-Klik salah satu warga untuk melihat detail lengkap:
-
-### Data Pribadi
-- Nama lengkap
-- NIK
-- Nomor KK
-- Tempat, tanggal lahir
-- Jenis kelamin
-- Agama
-- Status perkawinan
-- Pekerjaan
-- Pendidikan terakhir
-
-### Data Keluarga
-- Kepala keluarga
-- Hubungan dalam keluarga
-- Anggota keluarga lainnya
-
-### Data Kontak
-- Nomor telepon
-- Email
-- Alamat lengkap
-
-### Data Keuangan
-- Status iuran bulan ini
-- Histori pembayaran
-- Total tunggakan (jika ada)
-
-### Riwayat Aktivitas
-- Pengajuan surat
-- Laporan yang dibuat
-- Kehadiran kegiatan
+![alt text](assets/filter_warga.png)
 
 ## Menambah Warga Baru
 
@@ -94,27 +65,16 @@ Klik salah satu warga untuk melihat detail lengkap:
 <div className="step-container">
   <div className="step-number">2</div>
   <div className="step-content">
-    <h3>Pilih Jenis Pendaftaran</h3>
-    <p>Pilih salah satu:</p>
-    <ul>
-      <li><strong>Warga Baru</strong> - Untuk warga yang baru pindah ke RT</li>
-      <li><strong>Kelahiran</strong> - Untuk bayi yang baru lahir</li>
-      <li><strong>Anggota Keluarga Baru</strong> - Untuk anggota keluarga baru (menikah, dll)</li>
-    </ul>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">3</div>
-  <div className="step-content">
     <h3>Lengkapi Data Pribadi</h3>
     <p>Isi formulir dengan data yang valid:</p>
     <ul>
-      <li>NIK (pastikan valid dan belum terdaftar)</li>
       <li>Nama lengkap sesuai KTP</li>
+      <li>NIK (pastikan valid dan belum terdaftar)</li>
+      <li>No. KK</li>
+      <li>Alamat Tingal</li>
+      <li>Status (Anggota / Kepala Keluarga)</li>
       <li>Tempat, tanggal lahir</li>
       <li>Jenis kelamin</li>
-      <li>Agama</li>
       <li>Status perkawinan</li>
       <li>Pekerjaan</li>
       <li>Pendidikan</li>
@@ -122,62 +82,22 @@ Klik salah satu warga untuk melihat detail lengkap:
   </div>
 </div>
 
-<div className="step-container">
-  <div className="step-number">4</div>
-  <div className="step-content">
-    <h3>Lengkapi Data Keluarga</h3>
-    <p>Tentukan:</p>
-    <ul>
-      <li>Nomor KK (pilih yang ada atau buat baru)</li>
-      <li>Hubungan dalam keluarga</li>
-      <li>Kepala keluarga (jika KK baru)</li>
-    </ul>
-  </div>
-</div>
 
 <div className="step-container">
-  <div className="step-number">5</div>
-  <div className="step-content">
-    <h3>Lengkapi Alamat & Kontak</h3>
-    <p>Isi:</p>
-    <ul>
-      <li>Alamat lengkap (Jalan, Gang, Nomor)</li>
-      <li>RT/RW (otomatis terisi)</li>
-      <li>Kode pos</li>
-      <li>Nomor telepon</li>
-      <li>Email (opsional)</li>
-    </ul>
-  </div>
-</div>
-
-<div className="step-container">
-  <div className="step-number">6</div>
+  <div className="step-number">3</div>
   <div className="step-content">
     <h3>Upload Dokumen</h3>
     <p>Upload scan/foto dokumen:</p>
     <ul>
       <li>KTP</li>
       <li>Kartu Keluarga</li>
-      <li>Surat pindah (jika dari luar)</li>
     </ul>
   </div>
 </div>
 
-<div className="step-container">
-  <div className="step-number">7</div>
-  <div className="step-content">
-    <h3>Buat Akun (Opsional)</h3>
-    <p>Jika warga ingin menggunakan aplikasi:</p>
-    <ul>
-      <li>Centang <strong>Buat akun aplikasi</strong></li>
-      <li>Isi email dan nomor HP</li>
-      <li>Sistem akan mengirim kredensial login</li>
-    </ul>
-  </div>
-</div>
 
 <div className="step-container">
-  <div className="step-number">8</div>
+  <div className="step-number">4</div>
   <div className="step-content">
     <h3>Simpan Data</h3>
     <p>Klik <strong>Simpan</strong>, sistem akan memverifikasi dan menyimpan data</p>
@@ -222,9 +142,10 @@ Klik salah satu warga untuk melihat detail lengkap:
 Data sensitif seperti NIK dan tanggal lahir tidak bisa diubah sembarangan. Jika ada kesalahan input, hubungi admin.
 :::
 
+
 ## Mencatat Mutasi Warga
 
-### Warga Pindah Keluar
+### Warga Keluar
 
 <div className="step-container">
   <div className="step-number">1</div>
@@ -237,8 +158,8 @@ Data sensitif seperti NIK dan tanggal lahir tidak bisa diubah sembarangan. Jika 
 <div className="step-container">
   <div className="step-number">2</div>
   <div className="step-content">
-    <h3>Pilih Warga</h3>
-    <p>Cari dan pilih warga yang akan pindah</p>
+    <h3>Pilih Keluarga</h3>
+    <p>Cari dan pilih keluarga yang akan keluar</p>
   </div>
 </div>
 
@@ -248,9 +169,8 @@ Data sensitif seperti NIK dan tanggal lahir tidak bisa diubah sembarangan. Jika 
     <h3>Isi Detail Pindah</h3>
     <ul>
       <li>Tanggal pindah</li>
-      <li>Alamat tujuan</li>
+      <li>Alamat Lama</li>
       <li>Alasan pindah</li>
-      <li>Upload surat pindah (jika ada)</li>
     </ul>
   </div>
 </div>
@@ -259,11 +179,11 @@ Data sensitif seperti NIK dan tanggal lahir tidak bisa diubah sembarangan. Jika 
   <div className="step-number">4</div>
   <div className="step-content">
     <h3>Simpan</h3>
-    <p>Status warga akan berubah menjadi <strong>Pindah</strong></p>
+    <p>Status warga akan berubah menjadi <strong>Keluar</strong></p>
   </div>
 </div>
 
-### Warga Meninggal
+### Warga Pindah (Tetap di wilayah RT)
 
 <div className="step-container">
   <div className="step-number">1</div>
@@ -276,20 +196,20 @@ Data sensitif seperti NIK dan tanggal lahir tidak bisa diubah sembarangan. Jika 
 <div className="step-container">
   <div className="step-number">2</div>
   <div className="step-content">
-    <h3>Pilih Warga</h3>
-    <p>Cari dan pilih warga yang meninggal</p>
+    <h3>Pilih Keluarga</h3>
+    <p>Cari dan pilih keluarga yang akan pindah</p>
   </div>
 </div>
 
 <div className="step-container">
   <div className="step-number">3</div>
   <div className="step-content">
-    <h3>Isi Detail</h3>
+    <h3>Isi Detail Pindah</h3>
     <ul>
-      <li>Tanggal meninggal</li>
-      <li>Tempat meninggal</li>
-      <li>Penyebab (opsional)</li>
-      <li>Upload surat kematian</li>
+      <li>Tanggal pindah</li>
+      <li>Alamat Lama</li>
+      <li>Alamat Baru</li>
+      <li>Alasan pindah</li>
     </ul>
   </div>
 </div>
@@ -298,7 +218,7 @@ Data sensitif seperti NIK dan tanggal lahir tidak bisa diubah sembarangan. Jika 
   <div className="step-number">4</div>
   <div className="step-content">
     <h3>Simpan</h3>
-    <p>Status warga akan berubah menjadi <strong>Meninggal</strong></p>
+    <p>Status warga akan berubah menjadi <strong>Pindah</strong></p>
   </div>
 </div>
 
